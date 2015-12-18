@@ -1,6 +1,8 @@
 package com.zachcrabtree.commonconscience;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,10 +53,20 @@ public class GeneScreen extends ActionBarActivity {
         charPhys.setText("" + myCharacterObj.getPhysicalVal());
         charMent.setText("" + myCharacterObj.getMentalVal());
         charEmot.setText("" + myCharacterObj.getEmotionalVal());
+
+        //save character's data (might need to save other data here as well)
+        SharedPreferences savedData = getSharedPreferences("characterData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = savedData.edit();
+
+        editor.putString("charName", "Kipp");
+        editor.putInt("charPhys", myCharacterObj.getPhysicalVal());
+        editor.putInt("charMent", myCharacterObj.getMentalVal());
+        editor.putInt("charEmot", myCharacterObj.getEmotionalVal());
+        editor.commit();
     }
 
-    public void startLife(View view)
-    {
+    public void startLife(View view) {
+        //make an intent and move to next screen
         Intent toPlayerScreen = new Intent(this, PlayerScreen.class);
         startActivity(toPlayerScreen);
     }
