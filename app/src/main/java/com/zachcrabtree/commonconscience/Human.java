@@ -6,10 +6,10 @@ import java.util.Random;
  * Created by zakcrabtree on 12/17/15.
  */
 public class Human {
-    private int physicalVal = 0;
-    private int mentalVal = 0;
-    private int emotionalVal = 0;
 
+    //private values
+
+    private int physicalVal, mentalVal, emotionalVal; //basic stats
     private void generateStats()
     {
         Random statGenerator = new Random();
@@ -19,15 +19,37 @@ public class Human {
         emotionalVal = statGenerator.nextInt(11);
     }
 
-    public void Human()
+    //constructors!
+
+    Human()
     {
         generateStats();
     }
 
-    public void Human(Human mom, Human dad)
+    Human(Human mom, Human dad)
     {
         //averages mom's and dad's stats
-        physicalVal = (mom.physicalVal + dad.physicalVal) / 2;
+        physicalVal = (mom.getPhysicalVal() + dad.getPhysicalVal()) / 2;
+        mentalVal = (mom.getMentalVal() + dad.getMentalVal()) / 2;
+        emotionalVal = (mom.getEmotionalVal() + dad.getEmotionalVal()) / 2;
 
     }
+
+    //return methods
+
+    public int getPhysicalVal()
+    {
+        return physicalVal;
+    }
+    public int getMentalVal()
+    {
+        return mentalVal;
+    }
+    public int getEmotionalVal()
+    {
+        return emotionalVal;
+    }
+
+    //public functions
+
 }

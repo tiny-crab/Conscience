@@ -3,4 +3,11 @@
     <string name="action_settings">Settings</string>
     <string name="title">Messages from my Conscience</string>
     <string name="start_button">New Game</string>
+    <string name="motherLabel">Your Mother is: </string>
+    <string name="fatherLabel">Your Father is: </string>
+    <string name="characterLabel">Your name is: </string>
+    <string name="PhysLabel">Physical Ability: </string>
+    <string name="MentLabel">Mental Ability: </string>
+    <string name="EmotLabel">Emotional Ability: </string>
+    <string name="startLife_button">Start your life.</string>
 </resources>
