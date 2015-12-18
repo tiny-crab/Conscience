@@ -10,4 +10,5 @@
     <string name="MentLabel">Mental Ability: </string>
     <string name="EmotLabel">Emotional Ability: </string>
     <string name="startLife_button">Start your life.</string>
+    <string name="reRoll">Recreate Chars</string>
 </resources>

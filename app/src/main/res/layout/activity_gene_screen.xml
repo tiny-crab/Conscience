@@ -2,7 +2,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:theme="@android:style/Theme.Holo.Light.NoActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -187,6 +186,14 @@
         android:text="@string/startLife_button"
         android:id="@+id/button2"
         android:layout_gravity="center_horizontal"
-        android:onClick="startLife" />
+        android:onClick="startLife"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reRoll"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal"
+        android:onClick="reGenerate"/>
 
 </LinearLayout>

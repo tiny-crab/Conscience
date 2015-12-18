@@ -2,14 +2,12 @@ package com.zachcrabtree.commonconscience;
 
 import java.util.Random;
 
-/**
- * Created by zakcrabtree on 12/17/15.
- */
 public class Human {
 
     //private values
 
     private int physicalVal, mentalVal, emotionalVal; //basic stats
+    private String name;
     private void generateStats()
     {
         Random statGenerator = new Random();
@@ -19,11 +17,24 @@ public class Human {
         emotionalVal = statGenerator.nextInt(11);
     }
 
+    private void generateName()
+    {
+        //getting the maximum and minimum years (depending on the csv file used)
+        int max = 2008;
+        int min = 1880;
+        Random generator = new Random();
+        //generates a number between 1880 and 2008 to get year
+        int targetYear = generator.nextInt( (max-min)+1 ) + min;
+        //generates a 0 or 1, determines male (0) or female (1)
+        int targetGender = generator.nextInt(1);
+    }
+
     //constructors!
 
     Human()
     {
         generateStats();
+        generateName();
     }
 
     Human(Human mom, Human dad)
@@ -32,6 +43,7 @@ public class Human {
         physicalVal = (mom.getPhysicalVal() + dad.getPhysicalVal()) / 2;
         mentalVal = (mom.getMentalVal() + dad.getMentalVal()) / 2;
         emotionalVal = (mom.getEmotionalVal() + dad.getEmotionalVal()) / 2;
+        generateName();
 
     }
 

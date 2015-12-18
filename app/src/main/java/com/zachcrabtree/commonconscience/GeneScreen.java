@@ -6,10 +6,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class GeneScreen extends ActionBarActivity {
 
@@ -18,6 +15,23 @@ public class GeneScreen extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gene_screen);
         getSupportActionBar().hide();
+        generateNewCharacters();
+    }
+
+
+    public void reGenerate(View view)
+    {
+        generateNewCharacters();
+    }
+
+    public void startLife(View view) {
+        //make an intent and move to next screen
+        Intent toPlayerScreen = new Intent(this, PlayerScreen.class);
+        startActivity(toPlayerScreen);
+    }
+
+    public void generateNewCharacters()
+    {
         //create mother, father, and character
         Human motherObj = new Human();
         Human fatherObj = new Human();
@@ -62,12 +76,6 @@ public class GeneScreen extends ActionBarActivity {
         editor.putInt("charPhys", myCharacterObj.getPhysicalVal());
         editor.putInt("charMent", myCharacterObj.getMentalVal());
         editor.putInt("charEmot", myCharacterObj.getEmotionalVal());
-        editor.commit();
-    }
-
-    public void startLife(View view) {
-        //make an intent and move to next screen
-        Intent toPlayerScreen = new Intent(this, PlayerScreen.class);
-        startActivity(toPlayerScreen);
+        editor.apply();
     }
 }
