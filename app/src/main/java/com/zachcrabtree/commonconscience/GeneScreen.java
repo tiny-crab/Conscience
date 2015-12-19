@@ -18,7 +18,6 @@ public class GeneScreen extends ActionBarActivity {
         generateNewCharacters();
     }
 
-
     public void reGenerate(View view)
     {
         generateNewCharacters();

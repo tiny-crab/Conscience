@@ -17,6 +17,7 @@ public class Human {
         emotionalVal = statGenerator.nextInt(11);
     }
 
+    //leave this for later. Molly Randy and Kipp will be the main characters for now.
     private void generateName()
     {
         //getting the maximum and minimum years (depending on the csv file used)
@@ -47,7 +48,7 @@ public class Human {
 
     }
 
-    //return methods
+    //get methods
 
     public int getPhysicalVal()
     {
