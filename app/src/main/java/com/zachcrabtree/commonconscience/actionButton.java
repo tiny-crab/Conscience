@@ -1,11 +1,13 @@
 package com.zachcrabtree.commonconscience;
 
+import android.content.Context;
+import android.util.AttributeSet;
 import android.widget.Button;
 
-/**
- * Created by zakcrabtree on 12/19/15.
- */
-public class actionButton extends Button{
+public class actionButton extends Button {
 
-    private charAction action;
+    //constructors
+    actionButton(Context context, AttributeSet attrs){
+        super(context, attrs);
+    }
 }

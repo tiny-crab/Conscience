@@ -17,7 +17,4 @@ public class PlayerScreen extends ActionBarActivity {
         setContentView(R.layout.activity_player_screen);
         getSupportActionBar().hide();
     }
-
-
-
 }
