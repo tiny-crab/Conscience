@@ -18,52 +18,57 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        custom:action="@action/stressUp" />
+        custom:action="@array/stressUp" />
 
-    <Button
+    <com.zachcrabtree.commonconscience.actionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="stressDown"
         android:id="@+id/stressDown"
         android:layout_alignBottom="@+id/stressUp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        custom:action="@array/stressDown" />
 
-    <Button
+    <com.zachcrabtree.commonconscience.actionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="happyUp"
         android:id="@+id/happyUp"
         android:layout_above="@+id/stressUp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        custom:action="@array/happyUp" />
 
-    <Button
+    <com.zachcrabtree.commonconscience.actionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="happyDown"
         android:id="@+id/happyDown"
         android:layout_above="@+id/stressDown"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        custom:action="@array/happyDown" />
 
-    <Button
+    <com.zachcrabtree.commonconscience.actionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="energyUp"
         android:id="@+id/energyUp"
         android:layout_above="@+id/happyUp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        custom:action="@array/energyUp" />
 
-    <Button
+    <com.zachcrabtree.commonconscience.actionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="energyDown"
         android:id="@+id/energyDown"
         android:layout_alignBottom="@+id/energyUp"
         android:layout_alignRight="@+id/stressDown"
-        android:layout_alignEnd="@+id/stressDown" />
+        android:layout_alignEnd="@+id/stressDown"
+        custom:action="@array/energyDown" />
 
     <TextView
         android:layout_width="wrap_content"

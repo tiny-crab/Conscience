@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ARRAY MEANING -->
+<!-- [0] is stressMod -->
+<!-- [1] is energyMod -->
+<!-- [2] is happyMod -->
+<!-- [3] is timeIncrement -->
+<resources>
+    <string-array name="actionList">
+        <item>stressUp</item>
+        <item>stressDown</item>
+        <item>energyUp</item>
+        <item>energyDown</item>
+        <item>happyUp</item>
+        <item>happyDown</item>
+    </string-array>
+    <integer-array name="stressUp">
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="stressDown">
+        <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="energyUp">
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="energyDown">
+        <item>0</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="happyUp">
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="happyDown">
+        <item>0</item>
+        <item>0</item>
+        <item>-1</item>
+        <item>0</item>
+    </integer-array>
+
+</resources>
