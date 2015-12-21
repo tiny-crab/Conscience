@@ -7,12 +7,12 @@
 <!-- [3] is timeIncrement -->
 <resources>
     <string-array name="actionList">
-        <item>stressUp</item>
-        <item>stressDown</item>
-        <item>energyUp</item>
-        <item>energyDown</item>
-        <item>happyUp</item>
-        <item>happyDown</item>
+        <item>@array/stressUp</item>
+        <item>@array/stressDown</item>
+        <item>@array/energyUp</item>
+        <item>@array/energyDown</item>
+        <item>@array/happyUp</item>
+        <item>@array/happyDown</item>
     </string-array>
     <integer-array name="stressUp">
         <item>1</item>
