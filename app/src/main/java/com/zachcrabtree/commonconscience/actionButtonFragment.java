@@ -2,14 +2,12 @@ package com.zachcrabtree.commonconscience;
 
 import android.app.Fragment;
 import android.content.res.Resources;
-import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class actionButtonFragment extends Fragment {
 
@@ -18,7 +16,7 @@ public class actionButtonFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        getStringArray();
+        getActionArray();
         return inflater.inflate(R.layout.fragment_actionbuttons, container, false);
     }
 
@@ -30,39 +28,46 @@ public class actionButtonFragment extends Fragment {
         int actionToTake = 0;
         switch (view.getId()) {
             case R.id.action0:
-                actionToTake = 0;
+                actionToTake = actionIntArray[0];
                 break;
             case R.id.action1:
-                actionToTake = 1;
+                actionToTake = actionIntArray[1];
                 break;
             case R.id.action2:
-                actionToTake = 2;
+                actionToTake = actionIntArray[2];
                 break;
             case R.id.action3:
-                actionToTake = 3;
+                actionToTake = actionIntArray[3];
                 break;
             case R.id.action4:
-                actionToTake = 4;
+                actionToTake = actionIntArray[4];
                 break;
             case R.id.action5:
-                actionToTake = 5;
+                actionToTake = actionIntArray[5];
                 break;
             default:
                 //throw an error?
         }
-
         modArray = getXMLbyIndex(actionToTake);
+
+        TextView stressVal = (TextView) getView().findViewById(R.id.stressVal);
+        TextView energyVal = (TextView) getView().findViewById(R.id.energyVal);
+        TextView happyVal = (TextView) getView().findViewById(R.id.happyVal);
+
+        System.out.println(modArray.toString());
     }
 
-    private void getStringArray(){
+    private void getActionArray(){
         String[] actionArray = new String[]{};
         //get all of the references necessary to fill 6 buttons
         //eventually, this will be randomly generated, and finally, habitually generated
         actionArray = getResources().getStringArray(R.array.actionList);
+        //this int array will have
         actionIntArray = new int[actionArray.length];
         for (int x = 0; x < actionArray.length; x++) {
-            actionIntArray[x] = x;
+            actionIntArray[x] = x + 1;
         }
+        shuffleArray(actionIntArray);
     }
 
     private int[] getXMLbyIndex(int index) {
@@ -72,7 +77,7 @@ public class actionButtonFragment extends Fragment {
 
     private void shuffleArray(int[] shuffleArray)
     {
-        Random shuffler = ThreadLocalRandom.current();
+        Random shuffler = new Random();
         for(int x = shuffleArray.length-1; x > 0; x--)
         {
             int index = shuffler.nextInt(x + 1);

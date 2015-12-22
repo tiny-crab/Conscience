@@ -10,66 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zachcrabtree.commonconscience.PlayerScreen">
 
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="stressUp"
-        android:id="@+id/stressUp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        custom:action="@array/stressUp" />
-
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="stressDown"
-        android:id="@+id/stressDown"
-        android:layout_alignBottom="@+id/stressUp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        custom:action="@array/stressDown" />
-
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="happyUp"
-        android:id="@+id/happyUp"
-        android:layout_above="@+id/stressUp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        custom:action="@array/happyUp" />
-
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="happyDown"
-        android:id="@+id/happyDown"
-        android:layout_above="@+id/stressDown"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        custom:action="@array/happyDown" />
-
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="energyUp"
-        android:id="@+id/energyUp"
-        android:layout_above="@+id/happyUp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        custom:action="@array/energyUp" />
-
-    <com.zachcrabtree.commonconscience.actionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="energyDown"
-        android:id="@+id/energyDown"
-        android:layout_alignBottom="@+id/energyUp"
-        android:layout_alignRight="@+id/stressDown"
-        android:layout_alignEnd="@+id/stressDown"
-        custom:action="@array/energyDown" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -139,4 +79,14 @@
         android:layout_below="@+id/happyLabel"
         android:layout_toRightOf="@+id/stressLabel"
         android:layout_toEndOf="@+id/stressLabel" />
+
+    <fragment
+        android:name="com.zachcrabtree.commonconscience.actionButtonFragment"
+        android:id="@+id/fragment_actionbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_actionbuttons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
