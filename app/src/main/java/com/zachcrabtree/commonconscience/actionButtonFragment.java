@@ -9,9 +9,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.Random;
 
+//The action button fragment sits at the bottom of the player screen
+//it allows the user to select actions to modify stress, happiness, and energy levels in current game
+
+
 public class actionButtonFragment extends Fragment {
 
+    //an array that holds the modification values of each action
     private int[] modArray = new int[]{};
+    //this holds the
     private int[] actionIntArray;
 
     @Override

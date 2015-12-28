@@ -18,9 +18,4 @@ public class PlayerScreen extends ActionBarActivity {
         getSupportActionBar().hide();
     }
 
-    //  switch statement to handle button clicks
-    //  six or so buttons on the screen, each one references a specific action set in an array on the
-    //creation of the actionButtonFragment.
-    //  the action will modify the values of energy, stress, happiness, and time
-
 }

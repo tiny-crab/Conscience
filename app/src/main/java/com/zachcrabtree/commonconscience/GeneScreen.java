@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+//this screen comes right after creating a new game
+//it shows the mother and father and their child
+//not sure how many stats this will show, as to not be so overwhelming
+
 public class GeneScreen extends ActionBarActivity {
 
     @Override

@@ -7,6 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+//this screen will be the first screen that the user encounters
+//they can create a new game, change whatever settings need to be changed,
+// continue the current game, and check high scores
+
 public class MainMenu extends ActionBarActivity {
 
     @Override

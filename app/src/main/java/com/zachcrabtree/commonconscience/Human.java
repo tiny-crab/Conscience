@@ -2,6 +2,10 @@ package com.zachcrabtree.commonconscience;
 
 import java.util.Random;
 
+// the human is the base class for all characters in an instance of a game
+// the character will have some extra values in the end, but for now, the methods just
+//create new humans from parents and from nowhere.
+
 public class Human {
 
     //private values
