@@ -1,54 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- ARRAY MEANING -->
-<!-- [0] is stressMod -->
-<!-- [1] is energyMod -->
-<!-- [2] is happyMod -->
-<!-- [3] is timeIncrement -->
+<!-- Array Info -->
+<!--[0] Name of Action -->
+<!--[1] picture file resource -->
+<!--[2] stress modifier -->
+<!--[3] energy modifier -->
+<!--[4] happiness modifier -->
+<!--[5] time modifier -->
+<!--[6] monetary cost -->
+<!--[?] reqs for using action -->
 <resources>
-    <string-array name="actionList">
-        <item>@array/stressUp</item>
-        <item>@array/stressDown</item>
-        <item>@array/energyUp</item>
-        <item>@array/energyDown</item>
-        <item>@array/happyUp</item>
-        <item>@array/happyDown</item>
+    <string-array name="action1">
+        <item>Stress Up</item>
+        <item>picture file resource</item>
+        <item>10</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </string-array>
-    <integer-array name="stressUp">
-        <item>1</item>
+    <string-array name="action2">
+        <item>Stress Up</item>
+        <item>picture file resource</item>
+        <item>10</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
-    </integer-array>
-    <integer-array name="stressDown">
-        <item>-1</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-    <integer-array name="energyUp">
-        <item>0</item>
-        <item>1</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-    <integer-array name="energyDown">
-        <item>0</item>
-        <item>-1</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-    <integer-array name="happyUp">
-        <item>0</item>
-        <item>0</item>
-        <item>1</item>
-        <item>0</item>
-    </integer-array>
-    <integer-array name="happyDown">
-        <item>0</item>
-        <item>0</item>
-        <item>-1</item>
-        <item>0</item>
-    </integer-array>
+    </string-array>
 
 </resources>
